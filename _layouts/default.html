@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="./assets/style.css">
-  <title>Default</title>
-  <meta name="viewport" content="width=device-width">
-</head>
+  {% include head.html %}
 <body>
   {% include nav.html %}
   {% include banner.html %}
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  {% include members.html %}
+
+
+
+
+
   <script>
     AOS.init();
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.7.1/rellax.min.js"></script>
   <script>
     var rellax = new Rellax('.rellax');
   </script>
