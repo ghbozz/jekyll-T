@@ -2,14 +2,16 @@
 <html lang="en">
   {% include head.html %}
 <body>
-  {% include nav.html %}
-  {{ content }}
 
-  <script>
-    AOS.init();
-  </script>
-  <script>
-    var rellax = new Rellax('.rellax');
-  </script>
+  <div class="main-container">
+    <div class="contact-btn">Contact</div>
+    {% include nav.html %}
+
+    <div class="container">
+      {{ content }}
+    </div>
+
+  </div>
+
 </body>
 </html>
