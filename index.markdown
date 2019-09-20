@@ -6,3 +6,6 @@ layout: default
 banner_title: "This is my main Title!"
 banner_subtitle: "i'm testing jekyll framework"
 ---
+
+{% include banner.html %}
+{% include members.html %}
