@@ -9,6 +9,8 @@ $dark: rgb(36, 41, 45);
 $light: rgb(244, 244, 244);
 $light-blue: rgb(34, 155, 237);
 
+$nav-width: 200px;
+
 // GENERAL
 
 * {
@@ -39,7 +41,6 @@ $light-blue: rgb(34, 155, 237);
 
 .banner {
   height: 100vh;
-  padding-left: 100px;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -55,8 +56,11 @@ $light-blue: rgb(34, 155, 237);
 // NAV
 
 .side-nav {
+  position: sticky;
+  left: 0;
+  top: 0;
   height: 100vh;
-  width: 200px;
+  width: $nav-width;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -69,5 +73,14 @@ $light-blue: rgb(34, 155, 237);
     &:hover {
       color: $light;
     }
+  }
+  .nav-scroll {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0%;
+    background-color: lighten($dark, 5%);
+    opacity: .5;
   }
 }
