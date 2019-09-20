@@ -37,13 +37,13 @@ $nav-width: 200px;
   right: 20px;
 }
 
-// BANNER
+// SECTION
 
-.banner {
+.main-section {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   justify-content: center;
   h1 {
     color: $light;
@@ -56,6 +56,8 @@ $nav-width: 200px;
 // NAV
 
 .side-nav {
+  transition: all .6s ease-out;
+  transform: translateX(-100%);
   position: sticky;
   left: 0;
   top: 0;
@@ -65,16 +67,21 @@ $nav-width: 200px;
   align-items: center;
   justify-content: space-around;
   background-color: $dark;
+  ul {
+    z-index: 10 !important;
+  }
   li {
     transition: all .3s ease-out;
     padding: 20px 0px;
     font-size: 2em;
     color: darken($light, 30%);
+    cursor: pointer;
     &:hover {
       color: $light;
     }
   }
   .nav-scroll {
+    z-index: 0;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -82,5 +89,33 @@ $nav-width: 200px;
     height: 0%;
     background-color: lighten($dark, 5%);
     opacity: .5;
+  }
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+// FOOTER
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 50px !important;
+  background-color: rgb(50, 50, 50);
+  color: $light;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  i {
+    font-size: 2em;
+    margin-right: 15px;
   }
 }
