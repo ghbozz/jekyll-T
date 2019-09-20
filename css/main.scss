@@ -7,7 +7,7 @@
 
 $dark: rgb(36, 41, 45);
 $light: rgb(244, 244, 244);
-$light-blue: rgb(34, 155, 237);
+$light-blue: rgb(34, 105, 236);
 
 $nav-width: 200px;
 
@@ -24,9 +24,11 @@ $nav-width: 200px;
 }
 
 .contact-btn {
+  cursor: pointer;
+  transition: all .3s ease-out;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 25px;
   background-color: $light-blue;
   color: $light;
   border-radius: 40px;
@@ -35,6 +37,21 @@ $nav-width: 200px;
   position: absolute;
   top: 20px;
   right: 20px;
+  border: 1px solid $light;
+  font-weight: lighter;
+  &:hover {
+    background-color: white;
+    color: $light-blue;
+    border: 1px solid $light-blue;
+  }
+}
+
+// BANNER
+
+.home-banner {
+  .title {
+    font-size: 4em;
+  }
 }
 
 // SECTION
@@ -65,19 +82,25 @@ $nav-width: 200px;
   width: $nav-width;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
   background-color: $dark;
   ul {
+    width: 100%;
     z-index: 10 !important;
+    margin-bottom: 50px;
   }
   li {
+    width: 100%;
     transition: all .3s ease-out;
     padding: 20px 0px;
-    font-size: 2em;
+    font-size: 1.2em;
     color: darken($light, 30%);
     cursor: pointer;
     &:hover {
-      color: $light;
+      background-color: lighten($dark, 10%);
+      color: $light-blue;
     }
   }
   .nav-scroll {
@@ -95,7 +118,7 @@ $nav-width: 200px;
       bottom: 0;
       left: 0;
       width: 100%;
-      border-bottom: 1px solid $light;
+      border-bottom: 1px solid $light-blue;
     }
   }
 }

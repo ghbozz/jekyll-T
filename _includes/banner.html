@@ -1,12 +1,78 @@
-<section class="hero is-fullheight is-dark is-bold">
+<section class="hero is-fullheight is-dark is-bold home-banner">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title ml2">
+      <h1 class="title ml12" style="margin-bottom: 0px;">
         {{ page.banner_title }}
       </h1>
-      <h2 class="subtitle">
+      <h2 class="subtitle ml16">
         {{ page.banner_subtitle }}
       </h2>
     </div>
   </div>
 </section>
+
+
+<style>
+  .ml12 {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  .ml16 {
+    opacity: 0;
+    color: #402d2d;
+    padding: 40px 0;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    overflow: hidden;
+    transition: opacity .5s ease-out;
+  }
+
+  .ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+  const mainTitleAnim = () => {
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: false})
+      .add({
+        targets: '.ml12 .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      });
+  }
+
+  subTitleAnim = () => {
+    var textWrapper = document.querySelector('.ml16');
+    textWrapper.style.opacity = '1'
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: false})
+      .add({
+        targets: '.ml16 .letter',
+        translateY: [-200,0],
+        easing: "easeOutExpo",
+        duration: 1400
+      });
+  }
+
+  mainTitleAnim();
+  setTimeout(subTitleAnim, 1000)
+</script>
