@@ -17,5 +17,13 @@ const initSideNav = () => {
   })
 }
 
+const initToggleBurger = () => {
+  const burger = document.querySelector('.hamburger')
+  burger.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('is-active')
+  })
+}
+
+initToggleBurger();
 initSideNav();
 initScroll();
