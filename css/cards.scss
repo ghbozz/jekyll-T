@@ -1,0 +1,40 @@
+// CONFIG
+
+$dark: rgb(36, 41, 45);
+$light: rgb(244, 244, 244);
+$light-pruple: #7986cb;
+
+$nav-width: 200px;
+
+// CARD
+.team-card {
+  width: 600px;
+  display: flex;
+  color: $dark;
+  background-color: $light;
+  border-radius: 4px;
+  margin-bottom: 3rem;
+}
+
+.card-right {
+  position: relative;
+  padding: 15px;
+  h3 {
+    color: $light-pruple;
+    font-weight: 600;
+  }
+  i {
+    font-size: 2rem;
+    margin-right: 5px;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+.team-socials {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+

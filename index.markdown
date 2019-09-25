@@ -6,11 +6,8 @@ banner_title: "This is my main Title!"
 banner_subtitle: "i'm testing jekyll framework"
 ---
 
-<section class="main-section">
-  <h1 class="title">Section 1</h1>
-  <h2 class="subtitle">
-    A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-  </h2>
+<section class="main-section team-section">
+  {% include team.html %}
 </section>
 
 <section class="main-section">
